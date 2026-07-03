@@ -1,0 +1,19 @@
+name: CI on MicroVM runner
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: [self-hosted, microvm]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show where we are running
+        run: |
+          echo "hostname: $(hostname)"
+          echo "arch:     $(uname -m)"
+          echo "node:     $(node --version)"
+
+      - name: Run tests
+        run: npm test

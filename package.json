@@ -1,0 +1,10 @@
+{
+  "name": "microvm-ci-agent-demo",
+  "version": "1.0.0",
+  "description": "Demo app built by a GitHub Actions runner hosted on AWS Lambda MicroVMs",
+  "main": "src/calc.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
